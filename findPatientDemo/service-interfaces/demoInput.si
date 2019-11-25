@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:message xmlns:ns2="http://www.ibm.com/ims/Transaction" transactionCode="" messageName="demoInput" direction="0" serviceType="CICS_COMM_AREA">
+    <message id="1" name="demoInput">
+        <segment id="1" name="COMMAREA" originalName="COMMAREA">
+            <field name="HCCMAREA" originalName="HCCMAREA" included="Y" path="HCCMAREA">
+                <startPos>1</startPos>
+                <bytes>32500</bytes>
+                <maxBytes>32500</maxBytes>
+                <applicationDatatype datatype="STRUCT"/>
+                <field name="CA_REQUEST_ID" originalName="CA_REQUEST_ID" included="N" path="HCCMAREA.CA_REQUEST_ID">
+                    <startPos>1</startPos>
+                    <bytes>6</bytes>
+                    <maxBytes>6</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="CA_RETURN_CODE" originalName="CA_RETURN_CODE" included="N" path="HCCMAREA.CA_RETURN_CODE">
+                    <startPos>7</startPos>
+                    <bytes>2</bytes>
+                    <maxBytes>2</maxBytes>
+                    <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                        <typeConverter>ZONEDDECIMAL</typeConverter>
+                    </marshaller>
+                    <applicationDatatype datatype="DECIMAL" precision="2" scale="0"/>
+                </field>
+                <field name="patientID" originalName="CA_PATIENT_ID" included="Y" defaultValue="" isHex="false" path="HCCMAREA.patientID" codepageConversion="Y">
+                    <startPos>9</startPos>
+                    <bytes>10</bytes>
+                    <maxBytes>10</maxBytes>
+                    <remarks></remarks>
+                    <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                        <typeConverter>ZONEDDECIMAL</typeConverter>
+                    </marshaller>
+                    <applicationDatatype datatype="DECIMAL" precision="10" scale="0"/>
+                </field>
+                <field name="CA_REQUEST_SPECIFIC" originalName="CA_REQUEST_SPECIFIC" included="N" path="HCCMAREA.CA_REQUEST_SPECIFIC">
+                    <startPos>19</startPos>
+                    <bytes>32482</bytes>
+                    <maxBytes>32482</maxBytes>
+                    <applicationDatatype datatype="CHAR"/>
+                </field>
+                <field name="CA_PATIENT_REQUEST" originalName="CA_PATIENT_REQUEST" included="N" path="HCCMAREA.CA_PATIENT_REQUEST" redefines="CA_REQUEST_SPECIFIC">
+                    <startPos>19</startPos>
+                    <bytes>32482</bytes>
+                    <maxBytes>32482</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="CA_INS_CARD_NUM" originalName="CA_INS_CARD_NUM" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_INS_CARD_NUM">
+                        <startPos>19</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_FIRST_NAME" originalName="CA_FIRST_NAME" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_FIRST_NAME">
+                        <startPos>29</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_LAST_NAME" originalName="CA_LAST_NAME" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_LAST_NAME">
+                        <startPos>39</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_DOB" originalName="CA_DOB" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_DOB">
+                        <startPos>59</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_ADDRESS" originalName="CA_ADDRESS" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_ADDRESS">
+                        <startPos>69</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_CITY" originalName="CA_CITY" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_CITY">
+                        <startPos>89</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_POSTCODE" originalName="CA_POSTCODE" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_POSTCODE">
+                        <startPos>109</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_PHONE_MOBILE" originalName="CA_PHONE_MOBILE" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_PHONE_MOBILE">
+                        <startPos>119</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_EMAIL_ADDRESS" originalName="CA_EMAIL_ADDRESS" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_EMAIL_ADDRESS">
+                        <startPos>139</startPos>
+                        <bytes>50</bytes>
+                        <maxBytes>50</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_USERID" originalName="CA_USERID" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_USERID">
+                        <startPos>189</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_ADDITIONAL_DATA" originalName="CA_ADDITIONAL_DATA" included="N" path="HCCMAREA.CA_PATIENT_REQUEST.CA_ADDITIONAL_DATA">
+                        <startPos>199</startPos>
+                        <bytes>32302</bytes>
+                        <maxBytes>32302</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="CA_PATIENT_USER_REQUEST" originalName="CA_PATIENT_USER_REQUEST" included="N" path="HCCMAREA.CA_PATIENT_USER_REQUEST" redefines="CA_REQUEST_SPECIFIC">
+                    <startPos>19</startPos>
+                    <bytes>32482</bytes>
+                    <maxBytes>32482</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="CA_USERNAME" originalName="CA_USERNAME" included="N" path="HCCMAREA.CA_PATIENT_USER_REQUEST.CA_USERNAME">
+                        <startPos>19</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_USERPASSWORD" originalName="CA_USERPASSWORD" included="N" path="HCCMAREA.CA_PATIENT_USER_REQUEST.CA_USERPASSWORD">
+                        <startPos>29</startPos>
+                        <bytes>14</bytes>
+                        <maxBytes>14</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_ADDITIONAL_DATA" originalName="CA_ADDITIONAL_DATA" included="N" path="HCCMAREA.CA_PATIENT_USER_REQUEST.CA_ADDITIONAL_DATA">
+                        <startPos>43</startPos>
+                        <bytes>32458</bytes>
+                        <maxBytes>32458</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="CA_MEDICATION_REQUEST" originalName="CA_MEDICATION_REQUEST" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST" redefines="CA_REQUEST_SPECIFIC">
+                    <startPos>19</startPos>
+                    <bytes>32482</bytes>
+                    <maxBytes>32482</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="CA_DRUG_NAME" originalName="CA_DRUG_NAME" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_DRUG_NAME">
+                        <startPos>19</startPos>
+                        <bytes>50</bytes>
+                        <maxBytes>50</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_STRENGTH" originalName="CA_STRENGTH" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_STRENGTH">
+                        <startPos>69</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_AMOUNT" originalName="CA_AMOUNT" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_AMOUNT">
+                        <startPos>89</startPos>
+                        <bytes>3</bytes>
+                        <maxBytes>3</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="3" scale="0"/>
+                    </field>
+                    <field name="CA_ROUTE" originalName="CA_ROUTE" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_ROUTE">
+                        <startPos>92</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_FREQUENCY" originalName="CA_FREQUENCY" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_FREQUENCY">
+                        <startPos>112</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_IDENTIFIER" originalName="CA_IDENTIFIER" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_IDENTIFIER">
+                        <startPos>132</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_BIOMED_TYPE" originalName="CA_BIOMED_TYPE" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_BIOMED_TYPE">
+                        <startPos>152</startPos>
+                        <bytes>2</bytes>
+                        <maxBytes>2</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_START_DATE" originalName="CA_START_DATE" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_START_DATE">
+                        <startPos>154</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_END_DATE" originalName="CA_END_DATE" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_END_DATE">
+                        <startPos>164</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_PRESCRIPTION_ID" originalName="CA_PRESCRIPTION_ID" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_PRESCRIPTION_ID">
+                        <startPos>174</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <marshaller isSigned="N" isSignLeading="N" isSignSeparate="N" isWCHAROnly="N">
+                            <typeConverter>ZONEDDECIMAL</typeConverter>
+                        </marshaller>
+                        <applicationDatatype datatype="DECIMAL" precision="10" scale="0"/>
+                    </field>
+                    <field name="CA_ADDITIONAL_DATA" originalName="CA_ADDITIONAL_DATA" included="N" path="HCCMAREA.CA_MEDICATION_REQUEST.CA_ADDITIONAL_DATA">
+                        <startPos>184</startPos>
+                        <bytes>32317</bytes>
+                        <maxBytes>32317</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="CA_MEDITATION_REQUEST" originalName="CA_MEDITATION_REQUEST" included="N" path="HCCMAREA.CA_MEDITATION_REQUEST" redefines="CA_REQUEST_SPECIFIC">
+                    <startPos>19</startPos>
+                    <bytes>32482</bytes>
+                    <maxBytes>32482</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="CA_MEDITATION_NAME" originalName="CA_MEDITATION_NAME" included="N" path="HCCMAREA.CA_MEDITATION_REQUEST.CA_MEDITATION_NAME">
+                        <startPos>19</startPos>
+                        <bytes>50</bytes>
+                        <maxBytes>50</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_MEDITATION_TYPE" originalName="CA_MEDITATION_TYPE" included="N" path="HCCMAREA.CA_MEDITATION_REQUEST.CA_MEDITATION_TYPE">
+                        <startPos>69</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_RELIEF" originalName="CA_RELIEF" included="N" path="HCCMAREA.CA_MEDITATION_REQUEST.CA_RELIEF">
+                        <startPos>89</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_POSTURE" originalName="CA_POSTURE" included="N" path="HCCMAREA.CA_MEDITATION_REQUEST.CA_POSTURE">
+                        <startPos>109</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_HOW_OFTEN" originalName="CA_HOW_OFTEN" included="N" path="HCCMAREA.CA_MEDITATION_REQUEST.CA_HOW_OFTEN">
+                        <startPos>129</startPos>
+                        <bytes>20</bytes>
+                        <maxBytes>20</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_ADDITIONAL_DATA" originalName="CA_ADDITIONAL_DATA" included="N" path="HCCMAREA.CA_MEDITATION_REQUEST.CA_ADDITIONAL_DATA">
+                        <startPos>149</startPos>
+                        <bytes>32352</bytes>
+                        <maxBytes>32352</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="CA_THRESHOLD_REQUEST" originalName="CA_THRESHOLD_REQUEST" included="N" path="HCCMAREA.CA_THRESHOLD_REQUEST" redefines="CA_REQUEST_SPECIFIC">
+                    <startPos>19</startPos>
+                    <bytes>32482</bytes>
+                    <maxBytes>32482</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="CA_HR_THRESHOLD" originalName="CA_HR_THRESHOLD" included="N" path="HCCMAREA.CA_THRESHOLD_REQUEST.CA_HR_THRESHOLD">
+                        <startPos>19</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_BP_THRESHOLD" originalName="CA_BP_THRESHOLD" included="N" path="HCCMAREA.CA_THRESHOLD_REQUEST.CA_BP_THRESHOLD">
+                        <startPos>29</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_MS_THRESHOLD" originalName="CA_MS_THRESHOLD" included="N" path="HCCMAREA.CA_THRESHOLD_REQUEST.CA_MS_THRESHOLD">
+                        <startPos>39</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_ADDITIONAL_DATA" originalName="CA_ADDITIONAL_DATA" included="N" path="HCCMAREA.CA_THRESHOLD_REQUEST.CA_ADDITIONAL_DATA">
+                        <startPos>49</startPos>
+                        <bytes>32452</bytes>
+                        <maxBytes>32452</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+                <field name="CA_VISIT_REQUEST" originalName="CA_VISIT_REQUEST" included="N" path="HCCMAREA.CA_VISIT_REQUEST" redefines="CA_REQUEST_SPECIFIC">
+                    <startPos>19</startPos>
+                    <bytes>32482</bytes>
+                    <maxBytes>32482</maxBytes>
+                    <applicationDatatype datatype="STRUCT"/>
+                    <field name="CA_VISIT_DATE" originalName="CA_VISIT_DATE" included="N" path="HCCMAREA.CA_VISIT_REQUEST.CA_VISIT_DATE">
+                        <startPos>19</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_VISIT_TIME" originalName="CA_VISIT_TIME" included="N" path="HCCMAREA.CA_VISIT_REQUEST.CA_VISIT_TIME">
+                        <startPos>29</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_HEART_RATE" originalName="CA_HEART_RATE" included="N" path="HCCMAREA.CA_VISIT_REQUEST.CA_HEART_RATE">
+                        <startPos>39</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_BLOOD_PRESSURE" originalName="CA_BLOOD_PRESSURE" included="N" path="HCCMAREA.CA_VISIT_REQUEST.CA_BLOOD_PRESSURE">
+                        <startPos>49</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_MENTAL_STATE" originalName="CA_MENTAL_STATE" included="N" path="HCCMAREA.CA_VISIT_REQUEST.CA_MENTAL_STATE">
+                        <startPos>59</startPos>
+                        <bytes>10</bytes>
+                        <maxBytes>10</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                    <field name="CA_ADDITIONAL_DATA" originalName="CA_ADDITIONAL_DATA" included="N" path="HCCMAREA.CA_VISIT_REQUEST.CA_ADDITIONAL_DATA">
+                        <startPos>69</startPos>
+                        <bytes>32432</bytes>
+                        <maxBytes>32432</maxBytes>
+                        <applicationDatatype datatype="CHAR"/>
+                    </field>
+                </field>
+            </field>
+        </segment>
+    </message>
+</ns2:message>
